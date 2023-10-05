@@ -1,0 +1,9 @@
+<%= render 'user', user: @user%>
+<br/> 
+<div>
+  <%= link_to "Edit ", edit_user_path, class: "btn btn-success"%>
+  <%= link_to "Back ", user_index_path. class: "btn btn-warning" %>
+  <%= button_to "Delete" , @user, method: :delete,class: "btn btn-danger"%>
+  </div>
+<hr>
+ 

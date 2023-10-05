@@ -1,0 +1,28 @@
+<p style="color: green"><%= notice %></p>
+<div align="left"><h1>Teams</h1><br /><%= link_to "New team", new_user_role_team_path %></div>
+
+<div align="center">
+<table class="table" >
+  <thead class="table-success">
+    <tr>
+    <th></th>
+    <th scope="col"><strong>Name</strong></th>
+    <th scope="col"><strong>Employee assign</strong></th>
+    <th scope="col"><strong>Function</strong></th>
+    <th></th>
+
+    </tr>
+  </thead>
+  <% @role.teams.each do |team| %>
+  <tbody>
+  <th scope="row">
+    <td><%=team.name%></td>
+    <td><%=team.employee_assign%></td>
+    
+    <td><%= link_to "Task", user_role_team_tasks_url(@role.user,team.role,team)%></td>
+    <td><%= link_to "Show team", user_role_teams_path(@role.user,team.role) %></td>
+    </th>
+  <% end %>
+</tbody>
+</table>
+</div>

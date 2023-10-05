@@ -1,0 +1,32 @@
+<%= form_with(model: task,url: user_role_team_tasks_url) do |form| %>
+  <% if task.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(task.errors.count, "error") %> prohibited this task from being saved:</h2>
+
+      <ul>
+        <% task.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="form-group">
+    <%= form.label :name, style: "display: block" %>
+    <%= form.text_area :name ,class:"form-control"%>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :description, style: "display: block" %>
+    <%= form.text_area :descriptio,class:"form-control"%>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :team_id, style: "display: block" %>
+    <%= form.text_field :team_id, class:"form-control"%>
+  </div>
+
+  <div class="form-group">
+    <%= form.submit class:"btn btn-primary"%>
+  </div>
+<% end %>

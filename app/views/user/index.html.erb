@@ -1,0 +1,26 @@
+<div class="container-fluid">
+<table class="table">
+  <thead>
+    <tr>
+    <th></th>
+    <th scope="col"><strong>IP</strong></th>
+    <th scope="col"><strong>Username</strong></th>
+    <th scope="col"><strong>Function</strong></th>
+    </tr>
+  </thead>
+   <% @users.each do |user| %>
+  <tbody>
+      <th scope="row">
+      <td><%= user.ip %></td>
+      <td><%= user.username %></td>
+      <td><%= link_to "Show", user, class: "btn btn-outline-primary"%></td>
+      <td><%=link_to "role",user_roles_path(user),class: "btn btn-outline-secondary"%></td>
+      </th>
+    <% end %>
+  </tbody>
+</table>
+<div align="center">
+<%=link_to "New User",new_user_path,class: "btn btn-outline-info"%>
+</div>
+
+</div>

@@ -1,0 +1,36 @@
+    <p style="color: green"><%= notice %></p>
+    <div align="center">
+    <h1>Roles</h1>
+    <div align="center"><%= button_to "New role", new_user_role_path,class: "btn btn-outline-primary"%></div>
+
+    <br />
+    <table class="table">
+  <thead>
+    <tr>
+    <th scope="col"> <strong>Name</strong></th>
+    <th scope="col"> <strong>Grade</strong></th>
+    <th ></th>
+    <th scope="col"><strong>Function</strong></th>
+    <th scope="col"></th>
+   
+  </tr>
+  </thead>
+  <% @roles.each do |role| %>
+  <tbody>
+    <td scope="row">
+      <%= role.name %>
+    <td>
+      <%= role.grade %>
+    </td>
+    <td></td>
+    <td>
+      <%=link_to "Create a team", new_user_role_team_path(role.user,role),class: "btn btn-outline-primary"%>
+    </td>
+    </th>
+     <th scope="row">
+      <%= link_to "Show", user_role_url(role.user,role),class: "btn btn-outline-secondary"%>
+    </th>
+  <% end %>
+  </tbody>
+</table>
+</div>
