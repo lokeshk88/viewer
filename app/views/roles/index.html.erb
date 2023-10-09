@@ -1,4 +1,4 @@
-    <p style="color: green"><%= notice %></p>
+    <p style="color: green"><script>alert(<%= notice %>)</script></p>
     <div align="center">
     <h1>Roles</h1>
     <div align="center"><%= link_to "New role", new_user_role_path,class: "btn btn-outline-primary"%></div>
@@ -15,7 +15,7 @@
    
   </tr>
   </thead>
-  <% @roles.each do |role| %>
+  <% @user.roles.each do |role| %>
   <tbody>
     <td scope="row">
       <%= role.name %>

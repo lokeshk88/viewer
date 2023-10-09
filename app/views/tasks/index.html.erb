@@ -6,7 +6,6 @@
     <table class="table table-bordered">
       <thead>
         <tr class="table-primary">
-        <th scope="col"></th>
         <th scope="col"> <strong>Name</strong></th>
         <th scope="col"> <strong>Grade</strong></th>
         <th scope="col"></th>
@@ -21,9 +20,9 @@
         <td>
           <%= task.description%>
         </td>
-      </th>
-        <th scope="row">
-          <%= link_to "Show task", @task %>
+        <td>
+          <%= link_to "Show task",user_role_team_task_url(task.team.role.user, task.team.role, task.team, task) %>
+        </td>
         </th>
       <% end %>
       </tbody>
