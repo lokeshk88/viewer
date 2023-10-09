@@ -3,9 +3,10 @@
     <h1>Tasks</h1>
     <%= link_to "New task", new_user_role_team_task_path %>
 
-    <table class="table">
+    <table class="table table-bordered">
       <thead>
-        <tr>
+        <tr class="table-primary">
+        <th scope="col"></th>
         <th scope="col"> <strong>Name</strong></th>
         <th scope="col"> <strong>Grade</strong></th>
         <th scope="col"></th>
@@ -15,14 +16,14 @@
       <tbody>
         <th scope="row">
         <td>
-          <%= task.name %>
+          <%=task.name%>
         </td>
         <td>
           <%= task.description%>
         </td>
       </th>
         <th scope="row">
-          <%= link_to "Show task", task %>
+          <%= link_to "Show task", @task %>
         </th>
       <% end %>
       </tbody>

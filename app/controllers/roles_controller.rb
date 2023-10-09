@@ -1,5 +1,5 @@
 class RolesController < ApplicationController
-  before_action :set_user , only: %i[show edit update destroy]
+  before_action :set_user
   before_action :set_role, only: %i[ show edit update destroy ]
 
   # GET /roles or /roles.json
@@ -7,7 +7,6 @@ class RolesController < ApplicationController
     @roles = Role.all
   end
 
-  # GET /roles/1 or /roles/1.json
   def show
   end
 

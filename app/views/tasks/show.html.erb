@@ -2,9 +2,7 @@
 
 <%= render @task %>
 
-<div>
-  <%= link_to "Edit this task", edit_task_path(@task) %> |
-  <%= link_to "Back to tasks", tasks_path %>
-
-  <%= button_to "Destroy this task", @task, method: :delete %>
+<div class="card text-white bg-light w-50 ">
+  <div align="left"><%= link_to "Edit", edit_user_role_team_task_path(@task),class:"btn btn-dark text-white " %>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<%= link_to "Back", user_role_team_tasks_path,class:"btn btn-warning text-red" %></div>
+  <!--%= button_to "Delete", @task, method: :delete %-->
 </div>

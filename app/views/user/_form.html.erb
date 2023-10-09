@@ -12,15 +12,15 @@
   <% end %>
 
   <div class="form-group">
-    <%= form.label :ipaddress, class: "form-label" %>
-    <%= form.text_field :ip, class: "form-control" %>
+    <%= form.label :IP_Address, class: "form-label" %>
+    <%= form.text_field :ip, class: "form-control form-control-lg" %>
   </div>
   <br>
   <div class="form-group">
     <%= form.label :Username , class: "form-label"%>
-    <%= form.text_field :username, class: "form-control"%>
+    <%= form.text_field :username, class: "form-control form-control-lg"%>
   </div>
   <div>
-    <%= form.submit class: "btn btn-primary"%>
+    <%= form.submit class: "btn btn-primary btn-lg"%>
   </div>
 <% end %>

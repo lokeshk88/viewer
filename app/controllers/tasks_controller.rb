@@ -1,5 +1,5 @@
 class TasksController < ApplicationController
-  before_action :set_task, only: %i[ show edit update destroy ]
+  before_action :set_tasks, only: [:show, :edit, :update, :destroy]
   before_action :set_user
   before_action :set_role
   before_action :set_team
@@ -61,7 +61,7 @@ class TasksController < ApplicationController
 
   private
     # Use callbacks to share common setup or constraints between actions.
-    def set_task
+    def set_tasks
       @task = Task.find(params[:id])
     end
 

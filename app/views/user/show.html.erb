@@ -1,9 +1,18 @@
+
 <%= render 'user', user: @user%>
-<br/> 
-<div>
-  <%= link_to "Edit ", edit_user_path, class: "btn btn-success"%>
-  <%= link_to "Back ", user_index_path. class: "btn btn-warning" %>
-  <%= button_to "Delete" , @user, method: :delete,class: "btn btn-danger"%>
-  </div>
-<hr>
- 
+<br>
+<div class="card w-75">
+  <div class="card-body">
+  <div class="row" >
+    <div class="col">
+      <%= link_to "Edit ", edit_user_path, class: "btn btn-success btn-lg"%>
+    </div>
+    <div class="col">
+      <%= link_to "Back ", user_index_path, class: "btn btn-warning btn-lg "%>
+    </div>
+    <div class="col">
+      <%= link_to "Delete", @user, class: "btn btn-danger btn-lg", method: :delete %>
+    </div>
+</div>
+</div>
+</div>
