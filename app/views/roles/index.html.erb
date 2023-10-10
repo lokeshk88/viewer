@@ -4,17 +4,17 @@
     <div><%= link_to "New role", new_user_role_path,class: "btn btn-outline-primary"%></div>
     <br />
     <div class="table-responsive">
-      <table class="table table-striped table-sm">
-  <thead>
-    <tr>
-    <th scope="col"> <strong>Name</strong></th>
-    <th scope="col"> <strong>Grade</strong></th>
-    <th ></th>
-    <th scope="col"><strong>Function</strong></th>
-    <th scope="col"></th>
-  </tr>
-  </thead>
-  <% @user.roles.each do |role| %>
+    <table class="table table-striped table-sm">
+    <thead>
+      <tr>
+      <th scope="col"> <strong>Name</strong></th>
+      <th scope="col"> <strong>Grade</strong></th>
+      <th ></th>
+      <th scope="col"><strong>Function</strong></th>
+      <th scope="col"></th>
+    </tr>
+    </thead>
+    <% @user.roles.each do |role| %>
     <tbody>
     <td scope="row">
       <%= role.name %>
@@ -23,11 +23,10 @@
     </td>
     <td></td>
     <td>
-      <%=link_to "Create a team", new_user_role_team_path(role.user,role),class: "btn btn-outline-primary"%>
+      <%=link_to "Create a team", new_user_role_team_path(role.user,role),class: "btn btn-outline-primary"%>&nbsp;&nbsp;&nbsp;&nbsp;
+      <%= link_to "Edit", user_role_url(role.user,role),class: "btn btn-outline-secondary"%>
+       <%= link_to "Show teams", user_role_teams_path(role.user,role),class: "btn btn-outline-secondary"%>
     </td>
-    </th>
-     <th scope="row">
-      <%= link_to "Show", user_role_url(role.user,role),class: "btn btn-outline-secondary"%>
     </th>
   <% end %>
     </tbody>

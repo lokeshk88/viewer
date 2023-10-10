@@ -11,7 +11,7 @@ require 'faker'
 puts "Users datasets created..."
 50.times do |i|
   user = User.create!(
-  	username: Faker::Internet.username ,
+  	username: Faker::Internet.username
   	ip: Faker::Internet.ip_v4_address 
   	)
     puts "USER-#{i} -> #{user.username}:[#{user.ip}]"

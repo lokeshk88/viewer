@@ -1,9 +1,9 @@
-<h1 bg-color="red">New team</h1>
+<h1 title="color:red">New team</h1>
 
 <%= render "form", team: @team %>
 
 <br>
 
 <div>
-  <%= link_to "Back to teams", user_role_teams_path %>
+  <%= link_to "Back", user_role_teams_path,class:"btn btn-warning" %>
 </div>

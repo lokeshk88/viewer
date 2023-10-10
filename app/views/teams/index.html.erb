@@ -1,5 +1,9 @@
 <p style="color: green"><%= notice %></p>
- <div class="card" align="left"><h1>Teams</h1><br /><%= link_to "New team", new_user_role_team_path %></div>
+ <div align="left"><h1>Team Section</h1><br />
+  <div class="row">
+  <%= link_to "New team", new_user_role_team_path,class:"btn btn btn-primary" %>
+</div>
+ </div>
 
 <div align="center">
 <table class="table" >
@@ -18,9 +22,8 @@
   <th scope="row">
     <td><%=team.name%></td>
     <td><%=team.employee_assign%></td>
-    
-    <td><%= link_to "Task", user_role_team_tasks_url(@role.user,team.role,team)%></td>
-    <td><%= link_to "Show team", user_role_teams_path(@role.user,team.role) %></td>
+    <td><%= link_to "Edit", user_role_teams_path(@role.user,team.role),class:"btn btn-success" %></td>
+    <td><%= link_to "Task Assign", user_role_team_tasks_url(@role.user,team.role,team),class:"btn btn-primary"%></td>
     </th>
   <% end %>
 </tbody>

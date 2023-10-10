@@ -3,8 +3,8 @@
 <%= render @team %>
 
 <div>
-  <%= link_to "Edit this team", edit_user_role_team_path(@team) %> |
-  <%= link_to "Back to teams", user_role_teams_path %>
+  <%= link_to "Edit this team", edit_user_role_team_path(@team),class:"btn btn-success"%> |
+  <%= link_to "Back to teams", user_role_teams_path,class:"btn btn-warning" %>
 
   <!--%= button_to "Destroy this team", @team, method: :delete %-->
 </div>
