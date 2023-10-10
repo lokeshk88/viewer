@@ -18,8 +18,9 @@
     <%=render "shared/header"%>
     <div class="container-fluid">
     <div class="row">
-    <!--%=render "shared/alert"%-->
-      <%= yield %>
+    <%=render partial: "shared/main"%>
+    <%=render "shared/sidebar"%>
+    <%= yield %>
     </div>
   </div>
   </body>

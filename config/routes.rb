@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  resources :admins
     resources :user do
       resources :roles do 
         resources :teams do
