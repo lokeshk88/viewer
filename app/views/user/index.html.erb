@@ -1,5 +1,5 @@
 <div class="container-fluid">
-  <div class="card" align="left">
+  <div class="card mt-3">
   <%=link_to "New User",new_user_path,class: "btn btn-outline-info"%>
   </div>
 
@@ -10,8 +10,9 @@
     <th scope="col"><strong>IP</strong></th>
     <th scope="col"><strong>Username</strong></th>
     <th scope="col"></th>
+    <th scope="col"></th>
     <th scope="col"><strong>Function</strong></th>
-     <th scope="col"></th>
+    <th scope="col"></th>
     </tr>
   </thead>
    <% @users.each do |user| %>

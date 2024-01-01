@@ -51,6 +51,7 @@ gem "bootsnap", require: false
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem "debug", platforms: %i[ mri mingw x64_mingw ]
+  gem 'meta_request'
 end
 
 group :development do
@@ -72,10 +73,15 @@ group :test do
 end
 
 gem "devise", "~> 4.9"
+
 gem "rails-erd", "~> 1.7"
+
 gem "byebug", "~> 11.1"
+
 gem "bootstrap", "~> 5.3"
+
 gem "faker"
+
 gem "sassc-rails", "~> 2.1"
 
-
+gem 'ransack'
