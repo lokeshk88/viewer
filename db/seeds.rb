@@ -7,14 +7,16 @@
 #   Character.create(name: "Luke", movie: movies.first)
 require 'faker'
 
+
+User.delete_all
 #User datasets
-puts "Users datasets created..."
+puts "Users datasets creating...\n\n"
 50.times do |i|
-  user = User.create!(
-  	username: Faker::Internet.username
-  	ip: Faker::Internet.ip_v4_address 
+  User.create(
+  	ip: Faker::Internet.ip_v4_address, 
+    username: Faker::Internet.username
   	)
-    puts "USER-#{i} -> #{user.username}:[#{user.ip}]"
+   
 end
 
 

@@ -1,12 +1,17 @@
 <header class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow">
-  <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3" href="#">XYZ Company</a>
-  <button class="navbar-toggler position-absolute d-md-none collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <input class="form-control form-control-dark w-45" type="text" placeholder="Search" aria-label="Search">
-  <div class="navbar-nav">
-    <div class="nav-item text-nowrap">
-      <%=link_to "Reload",:back,class:"nav-link px-3"%>
-    </div>
-  </div>
+  <a class="navbar-brand col-md col-lg-2 me-0 px-3" href="#">XYZ Company</a>
+    <%#= search_form_for @q do |f| %>
+    <%#= f.label :'IP address' %>
+    <%#= f.search_field :user.ip_cont ,placeholder: "Search for username..."%>
+    <%#= f.submit class:"btn btn-primary btn-sm" %>
+  <%# end %>
+  
+  <div class="btn-toolbar mb-2 mb-md-0">
+      <%=button_to "Reload", root_path ,class:"btn btn-sm btn-outline-secondary"%>
+      <div class="btn-group me-2">
+        <%=button_to "Share it", root_path ,class:"btn btn-sm btn-outline-secondary"%>
+      </div>
+      <button type="button" class="btn btn-sm btn-outline-secondary dropdown-toggle">
+        <span data-feather="calendar">This week</span>   
+  </div> 
 </header>

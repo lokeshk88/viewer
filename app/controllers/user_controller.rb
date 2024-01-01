@@ -1,7 +1,8 @@
 class UserController < ApplicationController
   before_action :set_params, only: [:show, :edit, :update, :destroy]
   def index
-    @users = User.all
+    @q = User.ransack(params[:q])
+    @users=@q.result(distinct: true)
   end
 
   def show
